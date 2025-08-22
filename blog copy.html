@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Tailwind - Web Development Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-xl font-bold text-gray-900">Material Tailwind</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-6">
+                        <a href="#development-journery" class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-medium flex items-center">
+                            <span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                                </svg>
+                            </span> About
+                        </a>
+                        <a href="#Professional-Summary" class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-medium flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                              <path d="M12 2a7 7 0 00-7 7c0 3.866 3 7 7 7s7-3.134 7-7a7 7 0 00-7-7zm0 12a5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5 5 5 0 01-5 5zm-1 5h2v2h-2v-2z"/>
+                            </svg> 
+                         Solutions
+                        </a>
+                        <a href="#counters" class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-medium flex items-center">
+                            <span class="mr-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5"><path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd"></path></svg></span>
+                             counters
+                        </a>
+                        <a href="blog.html" class="nav-link text-gray-600 hover:text-gray-900 px-3 py-2 text-lg font-medium flex items-center">
+                         <span class="mr-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                           <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+                         </svg></span>
+                             Blog
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Desktop Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <!-- <button class="text-gray-600 hover:text-gray-900 text-lg font-medium">SIGN IN</button> -->
+                    <a href="#contact" class="bg-gray-900 text-white px-4 py-2 rounded-md text-lg font-medium hover:bg-gray-800 transition duration-300">
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden fixed inset-y-0 left-0 w-64 bg-white shadow-lg z-50">
+            <div class="p-4">
+                <div class="flex justify-between items-center mb-8">
+                    <h2 class="text-lg font-bold text-gray-900">Menu</h2>
+                    <button id="close-menu" class="text-gray-600 hover:text-gray-900">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="space-y-4">
+                    <a href="#development-journery" class="block text-gray-600 hover:text-gray-900 py-2 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                      <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+
+                        About
+                    </a>
+                    <a href="#Professional-Summary" class="block text-gray-600 hover:text-gray-900 py-2 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                      <path d="M12 2a7 7 0 00-7 7c0 3.866 3 7 7 7s7-3.134 7-7a7 7 0 00-7-7zm0 12a5 5 0 01-5-5 5 5 0 015-5 5 5 0 015 5 5 5 0 01-5 5zm-1 5h2v2h-2v-2z"/>
+                    </svg>
+                     Solutions
+                    </a>
+                    <a href="#counters" class="block text-gray-600 hover:text-gray-900 py-2 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="h-5 w-5"><path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75 0 011.06 0l2.25 2.25a.75.75 0 010 1.06l-2.25 2.25a.75.75 0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75 0 010-1.06zm4.28 4.28a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z" clip-rule="evenodd"></path></svg>
+                        counters
+                    </a>
+                    <a href="#blog" class="block text-gray-600 hover:text-gray-900 py-2 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="h-5 w-5" aria-hidden="true">
+                      <path d="M4 4h16v16H4V4zm2 2v12h12V6H6zm2 2h8v2H8V8zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/>
+                    </svg>
+                        Blog
+                    </a>
+                    <hr class="my-4">
+                    <a href="#contact" class="block w-full bg-gray-900 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-800">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+<!-- Blog Header -->
+<section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20 relative">
+  <div class="container mx-auto text-center px-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-2">Our Blog</h1>
+    <p class="text-lg md:text-xl opacity-80">Latest updates, insights, and tutorials</p>
+  </div>
+</section>
+
+<!-- Blog Filter Section -->
+<div class="container mx-auto px-4 -mt-12">
+  <div class="bg-white rounded-2xl p-6 shadow-lg flex flex-col md:flex-row md:justify-between gap-4 md:gap-0 items-center ">
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-3">
+      <button class="filter-tab bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 hover:text-white" data-filter="all">All</button>
+      <button class="filter-tab bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 hover:text-white" data-filter="csharp">C#</button>
+      <button class="filter-tab bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 hover:text-white" data-filter="javascript">JavaScript</button>
+      <button class="filter-tab bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 hover:text-white" data-filter="angular">Angular</button>
+      <button class="filter-tab bg-gray-100 text-gray-700 px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 hover:text-white" data-filter="dotnet">.NET</button>
+    </div>
+    <!-- Search Box -->
+    <div class="relative w-full md:w-1/3">
+      <input type="text" id="searchInput" placeholder="Search blogs..." class="w-full border border-gray-300 rounded-xl px-4 py-2 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-600">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11a6 6 0 11-12 0 6 6 0 0112 0z" />
+      </svg>
+    </div>
+  </div>
+</div>
+
+<!-- Blog Grid/List -->
+<div class="container mx-auto px-4 mt-8">
+  <div id="blogGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Blog Card Example -->
+    <div class="blog-card bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden flex flex-col">
+      <div class="relative">
+        <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" class="w-full h-56 object-cover transition-transform duration-300 hover:scale-105" alt="Blog Image">
+        <span class="absolute top-3 right-3 bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-bold">Performance</span>
+        <span class="absolute top-1/3 left-3 bg-black/70 text-white px-3 py-1 rounded-full text-xs font-semibold">C#</span>
+      </div>
+      <div class="p-5 flex flex-col flex-1">
+        <h3 class="text-xl font-bold mb-2 hover:text-blue-600 transition-colors">
+          <a href="#">Advanced C# Performance Optimization Techniques</a>
+        </h3>
+        <div class="flex gap-4 text-gray-500 text-sm mb-4">
+          <div class="flex items-center gap-1"><i class="fas fa-user"></i> Shreyansh Padmani</div>
+          <div class="flex items-center gap-1"><i class="fas fa-calendar"></i> June 15, 2025</div>
+        </div>
+        <p class="text-gray-600 mb-4 flex-1">Discover cutting-edge techniques to optimize C# applications for maximum performance. From memory management to async patterns...</p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Memory Management</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs">Async/Await</span>
+        </div>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-xl font-semibold hover:bg-blue-700 inline-flex items-center gap-2 justify-center transition">
+          <i class="fas fa-book"></i> Read Blog
+        </a>
+      </div>
+    </div>
+    <!-- Repeat blog cards... -->
+  </div>
+</div>
+
+<!-- Pagination -->
+<div class="container mx-auto px-4 mt-10 mb-20 flex justify-center">
+  <ul class="flex gap-2">
+    <li><a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-blue-600 hover:text-white">&lt;</a></li>
+    <li><a href="#" class="px-3 py-2 rounded-lg bg-blue-600 text-white border border-blue-600">1</a></li>
+    <li><a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-blue-600 hover:text-white">2</a></li>
+    <li><a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-blue-600 hover:text-white">3</a></li>
+    <li><a href="#" class="px-3 py-2 rounded-lg border border-gray-300 text-gray-700 hover:bg-blue-600 hover:text-white">&gt;</a></li>
+  </ul>
+</div>
+
+
+    <footer class="bg-gray-100 pt-16 pb-5 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Left Side - Main Content -->
+                <div class="space-y-8">
+                    <!-- Main Heading -->
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="text-4xl text-gray-800">
+                                <svg class="w-10 h-10" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L13.41 8.59L20 10L13.41 11.41L12 18L10.59 11.41L4 10L10.59 8.59L12 2Z"/>
+                                    <path d="M19 9L19.59 11.59L22 12L19.59 12.41L19 15L18.41 12.41L16 12L18.41 11.59L19 9Z"/>
+                                    <path d="M7 7L7.59 9.59L10 10L7.59 10.41L7 13L6.41 10.41L4 10L6.41 9.59L7 7Z"/>
+                                </svg>
+                            </div>
+                            <h2 class="text-3xl md:text-4xl lg:text-5xl font-light text-gray-800 tracking-wide">
+                                LET'S WORK
+                            </h2>
+                        </div>
+                        <h3 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 ml-14">
+                            TOGETHER!
+                        </h3>
+                    </div>
+
+                    <!-- Email Contact -->
+                    <div class="ml-14">
+                        <div class="flex items-center space-x-4 group cursor-pointer">
+                            <div class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center group-hover:bg-blue-700 transition-colors">
+                                <i class="fas fa-paper-plane text-white text-sm"></i>
+                            </div>
+                            <a href="mailto:shreyanspadmani.me@gmail.com" class="text-lg text-gray-800 hover:text-blue-600 transition-colors">
+                                shreyanspadmani.me@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Links -->
+                    <div class="flex space-x-6">
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
+                            <i class="fab fa-facebook-f text-gray-600 group-hover:text-blue-600 transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
+                            <i class="fab fa-twitter text-gray-600 group-hover:text-blue-400 transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
+                            <i class="fab fa-instagram text-gray-600 group-hover:text-pink-500 transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
+                            <i class="fab fa-linkedin-in text-gray-600 group-hover:text-blue-700 transition-colors"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md hover:shadow-lg transition-all hover:-translate-y-1 group">
+                            <i class="fab fa-github text-gray-600 group-hover:text-gray-900 transition-colors"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Profile Card -->
+                <div class="flex justify-center lg:justify-end">
+                    <div class=" w-full">
+                        <!-- Profile Header -->
+                        <div class="flex items-center space-x-4 mb-4">
+                            <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xl font-bold">SP</span>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-blue-600">SHREYANS</h4>
+                                <h4 class="text-xl font-bold text-blue-600">PADMANI</h4>
+                            </div>
+                        </div>
+
+                        <!-- Profile Description -->
+                        <p class="text-gray-600 text-sm leading-relaxed mb-6">
+                            Senior Software Engineer crafting high-performance solutions with C#, .NET & Angular. I turn complex challenges into clean, scalable code — with speed, security, and precision.
+                        </p>
+
+                        <!-- Navigation Links -->
+                       <div class="flex justify-start space-x-6">
+                        <a href="#" class="relative text-gray-600 hover:text-gray-900 transition-colors font-medium border border-black-800 px-2 py-0.5 rounded-full" >
+                          Home
+                        </a>
+                                              <!-- Blog -->
+                        <a href="#" class="relative text-gray-600 hover:text-gray-900 transition-colors font-medium border border-black-800 px-2 py-0.5 rounded-full">
+                          Blog
+                        </a>
+                                              <!-- Contact Us -->
+                        <a href="#" class="relative text-gray-600 hover:text-gray-900 transition-colors font-medium border border-black-800 px-2 py-0.5 rounded-full">
+                          Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Decorative Elements -->
+            <div class="absolute inset-0 pointer-events-none overflow-hidden">
+                <div class="absolute top-1/4 right-1/4 w-64 h-64 bg-blue-50 rounded-full opacity-30 transform rotate-45"></div>
+                <div class="absolute bottom-1/4 left-1/4 w-32 h-32 bg-blue-100 rounded-full opacity-20"></div>
+            </div>
+
+            <!-- Bottom Border -->
+            <div class="mt-10 pt-4 border-t border-gray-200">
+                <div class="text-center text-gray-500 text-sm">
+                    <p>&copy; 2025 Shreyans Padmani. All rights reserved.</p>
+                </div>
+            </div>
+    </footer>   
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</body>
+</html>
